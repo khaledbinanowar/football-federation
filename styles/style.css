@@ -11,6 +11,9 @@ main{
     flex-direction: column;
     align-items: center;
 }
+.section-pad{
+    padding: 60px 0;
+}
 .container{
     max-width: 80%;
     padding-right: 15px;
@@ -34,6 +37,7 @@ main{
     cursor: pointer;
     text-transform: capitalize;
     border: 1px solid #E02C6D;
+    display: inline-block;
 }
 .btn:hover{
     background-color: transparent;
@@ -56,25 +60,85 @@ main{
 }
 .banner-content{
     width: 485px;
-    height: 230px;
 }
 .banner-content h2{
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
-
+}
+.banner-content a i{
+    transform: translate(5px);
+    transition: .5s;
+}
+.banner-content a:hover i{
+    transform: translate(10px);
 }
 .banner-thumbnail img{
     width: 100%;
+    transform: scale(.8);
+    transition: 1s;
+}
+.banner:hover .banner-thumbnail img{
+    transform: scale(.9);
 }
 /* players area styles starts here */
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 0;
+    gap: 30px;
+}
+.player{
+    padding: 15px;
+    box-shadow: 2px 2px 25px #b5b4b49b;
+    transition: .5s;
+}
+.player:hover{
+    padding: 15px;
+    box-shadow: 15px 15px 35px #b5b4b49b;
 }
 .player-thumbnail img{
     width: 100%;
 
+}
+.player-content h3{
+    color: #18191F;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.player-content p{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+/* highlights area styles starts here */
+.highlights-content{
+    width: 485px;
+}
+.highlights-content h2{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #0A0826;
+}
+.highlights-content p{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.highlights-content a i{
+    transform: translate(5px);
+    transition: .5s;
+}
+.highlights-content a:hover i{
+    transform: translate(10px);
+}
+.highlights-thumbnail img{
+    width: 100%;
+    transform: scale(.8);
+    transition: 1s;
+}
+.highlights:hover .highlights-thumbnail img{
+    transform: scale(.9);
 }
