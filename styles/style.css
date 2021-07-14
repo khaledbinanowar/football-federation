@@ -1,13 +1,13 @@
 /* font import url */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* global styles starts here */
 :root {
     --main-backgroung: #2D25A0;
     --main-color: #E02C6D;
     --heading-color:#0A0826;
     --content-color:#6C6C6C;
 }
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ main{
     align-items: center;
 }
 .section-pad{
-    padding: 60px 0;
+    padding: 50px 0;
 }
 .container{
     max-width: 80%;
@@ -61,6 +61,7 @@ main{
     margin: 20px 30px;
     font-size: 14px;
 }
+
 /* banner area styles starts here */
 .banner{
     background-color: var(--main-backgroung);
@@ -89,6 +90,7 @@ main{
 .banner:hover .banner-thumbnail img{
     transform: scale(.9);
 }
+
 /* players area styles starts here */
 .players{
     display: grid;
@@ -106,7 +108,6 @@ main{
 }
 .player-thumbnail img{
     width: 100%;
-
 }
 .player-content h3{
     color: #18191F;
@@ -119,6 +120,7 @@ main{
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
+
 /* highlights area styles starts here */
 .highlights-content{
     width: 485px;
@@ -149,6 +151,66 @@ main{
 .highlights:hover .highlights-thumbnail img{
     transform: scale(.9);
 }
+
+/* latest area styles starts here */
+.latest-title{
+    background-color: var(--main-backgroung);
+    width: 27%;
+    order: 2;
+    text-align: center;
+    border-radius: 10px;
+}
+.latest-title i {
+    font-size: 50px;
+    color: #ffffff;
+    margin: 1.5em;
+}
+.latest-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 20px;
+    line-height: 2;
+}
+.latest-info{
+    width: 70%;
+    order: 1;
+}
+.latest-info-item{
+    padding: 2em 0;
+    border-bottom: 2px solid #e4e8f0;
+}
+.latest-item-thumbnail {
+    width: 25%;
+}
+.latest-info-item .latest-item-thumbnail img {
+    width: 80px;
+    height: 80px;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+.latest-item-content{
+    width: 70%;
+}
+.latest-item-content h3{
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--content-color);
+}
+.latest-item-content p{
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+    margin: 0;
+}
+
 /* ranking area styles starts here */
 .ranking-title{
     width: 27%;
@@ -157,6 +219,11 @@ main{
 .sticky-element {
     position: sticky;
     top: 5em;
+}
+.ranking-title i {
+    color: var(--heading-color);
+    font-size: 50px;
+    margin-top: 1.7em;
 }
 .ranking-title h2{
     font-size: 35px;
@@ -195,18 +262,21 @@ main{
 .ranking-info table tr{
     cursor: pointer;
     color: var(--heading-color);
-    border-bottom: 1px solid #e4e8f0;
+    border-bottom: 2px solid #e4e8f0;
 }
-.ranking-info table td{
+.ranking-info table td,
+.ranking-info table td h3{
+    font-size: 18px;
+    font-weight: 700;
     text-align: start;
     vertical-align: middle;
-    padding: 1rem .5rem;
+    padding: 16px 8px;
 }
 .ranking-info .country__container{
     display: inline-flex;
     width: 100%;
-    padding: .5rem;
-    border-radius: .375rem;
+    padding: 8px;
+    border-radius: 10px;
 }
 .ranking-info .country__image img{
     height: 44px;
@@ -220,6 +290,7 @@ main{
     text-decoration: none;
     color: var(--main-backgroung);
 }
+
 /* footer area styles starts here */
 footer .footer-info{
     width: 480px;
@@ -244,4 +315,201 @@ footer .footer-info .social ul i{
 }
 footer .footer-info .copyright p{
     font-size: 18px;
+}
+
+/* tablet responsive styles here */
+@media (min-width:668px) and (max-width:992px){
+    .section-pad{
+        padding: 40px 0;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .btn-l{
+        padding: 10px 18px;
+        margin: 12px;
+        font-size: 16px;
+    }
+
+    .banner-content,
+    .highlights-content,
+    footer .footer-info{
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner-content h2,
+    .highlights-content h2,
+    .ranking-info .ranking-heading h5{
+        font-size: 28px;
+    }
+
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .player{
+        padding: 12px;
+    }
+    .player-content h3{
+        font-size: 20px;
+    }
+    .player-content p,
+    .highlights-content p,
+    .ranking-title p,
+    .ranking-update p{
+        font-size: 14px;
+    }
+    .latest-title {
+        width: 400px;
+        order: 1;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .latest-title i,
+    .ranking-title i {
+        font-size: 30px;
+        margin: 1em;
+    }
+    .latest-title h2,
+    .ranking-title h2 {
+        font-size: 20px;
+        padding: 0 10px;
+        margin-top: 0;
+    }
+    .latest-info{
+        width: 100%;
+    }
+    .latest-info-item{
+        padding: 1em 0;
+    }
+    .latest-item-thumbnail {
+        width: 100%;
+        text-align: center;
+    }
+    .latest-item-content{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .ranking-info table th,
+    .ranking-info table td,
+    .ranking-info table td h3,
+    .footer-info .copyright p {
+        font-size: 14px;
+    }
+    
+    .ranking-title,
+    .ranking-info{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* mobile responsive styles here */
+@media (max-width:668px){
+    .half-width{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .section-pad{
+        padding: 30px 0;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .btn-l{
+        padding: 8px 15px;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    .banner-content,
+    .highlights-content,
+    footer .footer-info{
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner-content h2,
+    .highlights-content h2,
+    .ranking-info .ranking-heading h5{
+        font-size: 24px;
+    }
+
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .player{
+        padding: 8px;
+    }
+    .player-content h3{
+        font-size: 16px;
+    }
+    .player-content p,
+    .highlights-content p,
+    .ranking-title p,
+    .ranking-update p{
+        font-size: 12px;
+    }
+    .latest-title {
+        width: 100%;
+        order: 1;
+    }
+    .latest-title i,
+    .ranking-title i {
+        font-size: 30px;
+        margin: 1em;
+    }
+    .latest-title h2,
+    .ranking-title h2 {
+        font-size: 24px;
+        padding: 0 10px;
+        line-height: 1;
+    }
+    .latest-info{
+        width: 100%;
+        order: 2;
+    }
+    .latest-info-item{
+        padding: 1em 0;
+    }
+    .latest-item-thumbnail {
+        width: 100%;
+        text-align: center;
+    }
+    .latest-info-item .latest-item-thumbnail img,
+    .ranking-info .country__container {
+        border-radius: 5px;
+    }
+    .latest-item-content{
+        width: 100%;
+        text-align: center;
+    }
+    .ranking-info table th,
+    .ranking-info table td,
+    .ranking-info table td h3,
+    .footer-info .copyright p {
+        font-size: 12px;
+    }
+
+    .ranking .ranking-title .sticky-element p {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .ranking-title,
+    .ranking-info{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .footer-info .social ul li{
+        margin: 5px;
+    }
+    footer .footer-info .social ul i{
+        font-size: 20px;
+        color: var(--content-color);
+    
+    }
 }
