@@ -1,6 +1,12 @@
 /* font import url */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+    --main-backgroung: #2D25A0;
+    --main-color: #E02C6D;
+    --heading-color:#0A0826;
+    --content-color:#6C6C6C;
+}
 
 body {
     margin: 0;
@@ -24,24 +30,25 @@ main{
 .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .half-width{
     width: 48.5%;
 }
 .btn{
     text-decoration: none;
-    background-color: #E02C6D;;
+    background-color: var(--main-color);
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     transition: .5s;
     cursor: pointer;
     text-transform: capitalize;
-    border: 1px solid #E02C6D;
+    border: 1px solid var(--main-color);
     display: inline-block;
 }
 .btn:hover{
     background-color: transparent;
-    color: #E02C6D;
+    color: var(--main-color);
 }
 .btn-l{
     padding: 10px 30px;
@@ -56,7 +63,7 @@ main{
 }
 /* banner area styles starts here */
 .banner{
-    background-color: #2D25A0;
+    background-color: var(--main-backgroung);
 }
 .banner-content{
     width: 485px;
@@ -108,7 +115,7 @@ main{
     font-family: 'Poppins', sans-serif;
 }
 .player-content p{
-    color: #6C6C6C;
+    color: var(--content-color);
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
@@ -120,10 +127,10 @@ main{
     font-size: 48px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    color: #0A0826;
+    color: var(--heading-color);
 }
 .highlights-content p{
-    color: #6C6C6C;
+    color: var(--content-color);
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
@@ -141,4 +148,100 @@ main{
 }
 .highlights:hover .highlights-thumbnail img{
     transform: scale(.9);
+}
+/* ranking area styles starts here */
+.ranking-title{
+    width: 27%;
+    position: relative;
+}
+.sticky-element {
+    position: sticky;
+    top: 5em;
+}
+.ranking-title h2{
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: var(--heading-color);
+}
+.ranking-title p,
+.ranking-update p{
+    color: var(--content-color);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.ranking-info{
+    width: 70%;
+}
+.ranking-info .ranking-heading h5{
+    font-size: 35px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: var(--heading-color);
+}
+.ranking-info table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+.ranking-info table th{
+    color: var(--content-color);
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+.ranking-info table tr{
+    cursor: pointer;
+    color: var(--heading-color);
+    border-bottom: 1px solid #e4e8f0;
+}
+.ranking-info table td{
+    text-align: start;
+    vertical-align: middle;
+    padding: 1rem .5rem;
+}
+.ranking-info .country__container{
+    display: inline-flex;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .375rem;
+}
+.ranking-info .country__image img{
+    height: 44px;
+    width: 66px;
+}
+.ranking-info .country__name{
+    align-self: center!important;
+    margin-left: 20px;
+}
+.ranking-info .full-ranking a {
+    text-decoration: none;
+    color: var(--main-backgroung);
+}
+/* footer area styles starts here */
+footer .footer-info{
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+footer .footer-info .logo img{
+    width: 100%;
+}
+footer .footer-info .social ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+}
+footer .footer-info .social ul li{
+    margin: 10px;
+}
+footer .footer-info .social ul i{
+    font-size: 25px;
+    color: var(--content-color);
+
+}
+footer .footer-info .copyright p{
+    font-size: 18px;
 }
